@@ -40,13 +40,25 @@
         <label for="ccNumber">Credit Card #:</label>
         <input id="ccNumber" type="text" th:field="*{ccNumber}">
         <br/>
+        <span   class="validationError"
+                th:if="${#fields.hasErrors('ccNumber')}"
+                th:errors="*{ccNumber}">CC Num Error</span>
+        <br/>
 
         <label for="ccExpiration">Expiration:</label>
         <input id="ccExpiration" type="text" th:field="*{ccExpiration}">
         <br/>
+        <span   class="validationError"
+                th:if="${#fields.hasErrors('ccExpiration')}"
+                th:errors="*{ccExpiration}">CC Expiration Error</span>
+        <br/>
 
         <label for="ccCVV">CVV:</label>
         <input id="ccCVV" type="text" th:field="*{ccCVV}">
+        <br/>
+        <span   class="validationError"
+                th:if="${#fields.hasErrors('ccCVV')}"
+                th:errors="*{ccCVV}">CCV Error</span>
         <br/>
 
         <input type="submit" value="Submit Order"/>

@@ -40,8 +40,6 @@ public class JdbcIngredientRepository implements IngredientRepository {
             return results.size() == 0 ?
                     Optional.empty() :
                     Optional.of(results.get(0));
-        )
-        return Optional.empty();
     }
 
     @Override
